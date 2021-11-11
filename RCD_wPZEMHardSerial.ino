@@ -3,12 +3,13 @@
 #include "rgb_lcd.h"
 #define RELAY_PIN 4
 
+/* https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight */
 rgb_lcd lcd;
-
+/*
 const int colorR = 0;
 const int colorG = 0;
 const int colorB = 0;
-
+*/
 
 /* Hardware Serial3 is only available on certain boards.
  * For example the Arduino MEGA 2560
@@ -20,8 +21,8 @@ void setup() {
   Serial.begin(115200);
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
-  randomSeed(analogRead(0));
-  lcd.setRGB( random(256), random(256), random(256));
+  // randomSeed(analogRead(0));
+  // lcd.setRGB( random(256), random(256), random(256));
 
   // Print a message to the LCD.
   lcd.print("Starting...");
